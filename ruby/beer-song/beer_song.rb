@@ -18,13 +18,6 @@ class BeerSong
   end
 
   def verses(start, down_to)
-    # v = ""
-    # until start == (down_to - 1)
-    #   v << verse(start) + "\n"
-    #   start -= 1
-    # end
-    # v
-
     count = (down_to..start).to_a.reverse
     count.inject("") do |sum, blah|
       sum += verse(blah) + "\n"
@@ -34,4 +27,5 @@ class BeerSong
   def sing
     verses(99, 0)
   end
+
 end
