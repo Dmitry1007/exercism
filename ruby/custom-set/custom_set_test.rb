@@ -19,84 +19,84 @@ class CustomSetTest < Minitest::Test
   end
 
   def test_nothing_is_contained_in_an_empty_set
-    skip
+    # skip
     set = CustomSet.new []
     element = 1
     refute set.member? element
   end
 
   def test_when_the_element_is_in_the_set
-    skip
+    # skip
     set = CustomSet.new [1, 2, 3]
     element = 1
     assert set.member? element
   end
 
   def test_when_the_element_is_not_in_the_set
-    skip
+    # skip
     set = CustomSet.new [1, 2, 3]
     element = 4
     refute set.member? element
   end
 
   def test_empty_set_is_a_subset_of_another_empty_set
-    skip
+    # skip
     set1 = CustomSet.new []
     set2 = CustomSet.new []
     assert set1.subset? set2
   end
 
   def test_empty_set_is_a_subset_of_non_empty_set
-    skip
+    # skip
     set1 = CustomSet.new []
     set2 = CustomSet.new [1]
     assert set1.subset? set2
   end
 
   def test_non_empty_set_is_not_a_subset_of_empty_set
-    skip
+    # skip
     set1 = CustomSet.new [1]
     set2 = CustomSet.new []
     refute set1.subset? set2
   end
 
   def test_set_is_a_subset_of_set_with_exact_same_elements
-    skip
+    # skip
     set1 = CustomSet.new [1, 2, 3]
     set2 = CustomSet.new [1, 2, 3]
     assert set1.subset? set2
   end
 
   def test_set_is_a_subset_of_larger_set_with_same_elements
-    skip
+    # skip
     set1 = CustomSet.new [1, 2, 3]
     set2 = CustomSet.new [4, 1, 2, 3]
     assert set1.subset? set2
   end
 
   def test_set_is_not_a_subset_of_set_that_does_not_contain_its_elements
-    skip
+    # skip
     set1 = CustomSet.new [1, 2, 3]
     set2 = CustomSet.new [4, 1, 3]
     refute set1.subset? set2
   end
 
   def test_the_empty_set_is_disjoint_with_itself
-    skip
+    # skip
     set1 = CustomSet.new []
     set2 = CustomSet.new []
     assert set1.disjoint? set2
   end
 
   def test_empty_set_is_disjoint_with_non_empty_set
-    skip
+    # skip
     set1 = CustomSet.new []
     set2 = CustomSet.new [1]
     assert set1.disjoint? set2
   end
 
   def test_non_empty_set_is_disjoint_with_empty_set
-    skip
+    # skip
     set1 = CustomSet.new [1]
     set2 = CustomSet.new []
     assert set1.disjoint? set2
