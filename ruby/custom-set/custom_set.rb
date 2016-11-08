@@ -23,7 +23,15 @@ class CustomSet
 
   def disjoint?(set)
     data.all? do |element|
-      set.member?(element)
+      !set.member?(element)
     end
+  end
+
+  def ==(set)
+    self.data.sort == set.data.sort
+  end
+
+  def add(element)
+    data.push(element)
   end
 end
