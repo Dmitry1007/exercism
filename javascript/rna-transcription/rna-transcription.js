@@ -3,10 +3,10 @@ function DnaTranscriber() {}
 DnaTranscriber.prototype.toRna = function (dnaStrand) {
   rnaStrand = []
   dnaStrand.split('').forEach(function (nucleotide) {
-    if (nucleotide === 'C') {rnaStrand.push('G')}
-    if (nucleotide === 'G') {rnaStrand.push('C')}
-    if (nucleotide === 'A') {rnaStrand.push('U')}
-    if (nucleotide === 'T') {rnaStrand.push('A')}
+    nucleotide === 'C' ? rnaStrand.push('G') : null
+    nucleotide === 'G' ? rnaStrand.push('C') : null
+    nucleotide === 'A' ? rnaStrand.push('U') : null
+    nucleotide === 'T' ? rnaStrand.push('A') : null
   })
   return rnaStrand.join('')
 }
