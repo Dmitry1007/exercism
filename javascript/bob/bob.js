@@ -3,7 +3,7 @@ var Bob = function() {};
 Bob.prototype.hey = function(input) {
   // if input is lowercase and ends with '.' or '!' or uses an acronym like 'DMV' or contains Only numbers(and commas)
     // return 'Whatever.'
-  if(hasLowerCase(input) && endsWithPeriod(input) || endsWithExclamationPoint(input)) {
+  if(hasLowerCase(input) && endsWithPeriod(input) || endsWithExclamationPoint(input) || containsOnlyNumbers(input)) {
     return 'Whatever.'
   }
 
@@ -19,6 +19,10 @@ function hasLowerCase(str) {
   return (/[a-z]+\.?/.test(str))
 }
 
+// function hasUpperCase(str) {
+//   return (/[A-Z]+\.?/.test(str))
+// }
+
 function endsWithPeriod(str) {
   var lastChar = str.slice(-1)
   return (/\./.test(lastChar))
@@ -30,12 +34,14 @@ function endsWithExclamationPoint(str) {
 }
 
 function containsAcronym(str) {
-  // not sure how I'm gonna do this?
+  if (hasLowerCase(str)) {
+
+  }
 }
 
 function containsOnlyNumbers(str) {
-  // fix this
-  return (/^\d+$/.test(str))
+  var removedCommas = str.replace(/,/g, '')
+  return (/^\d+$/.test(removedCommas))
 }
 
 module.exports = Bob

@@ -23,7 +23,7 @@ describe('Bob', function() {
     expect(result).toEqual('Whatever.');
   });
 
-  it('using acronyms in regular speech', function() {
+  xit('using acronyms in regular speech', function() {
     var result = bob.hey('It\'s OK if you don\'t want to go to the DMV.');
     expect(result).toEqual('Whatever.');
   });
@@ -38,7 +38,7 @@ describe('Bob', function() {
     expect(result).toEqual('Whoa, chill out!');
   });
 
-  xit('only numbers', function() {
+  it('only numbers', function() {
     var result = bob.hey('1, 2, 3');
     expect(result).toEqual('Whatever.');
   });
